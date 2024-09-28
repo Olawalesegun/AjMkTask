@@ -61,9 +61,9 @@ export function QuesBlock({ questions }) {
   }
 
   return (
-    <>
+    <div className="container">
       <h2> Quiz about to commence!!!</h2>
-      <form>
+      <form className="container w-[36px] border-yellow-200">
         {questions != undefined &&
           actualQuestionShowingOnPage.map((ques, index) => {
             const indexNeededToTrackQuestion = startingIndexForOurPage + index;
@@ -74,7 +74,7 @@ export function QuesBlock({ questions }) {
                 </h3>
               <div>
                 {ques.options.map((optionsInArray) => (
-                  <div key={optionsInArray}>
+                  <div key={optionsInArray} className="mx-8">
                     <label >
                     <input
                       type="radio"
@@ -85,6 +85,7 @@ export function QuesBlock({ questions }) {
                     />
                     <span className="ml-2">{optionsInArray}</span>
                   </label>
+                  
                 </div>
                 ))}
               </div>
@@ -92,7 +93,8 @@ export function QuesBlock({ questions }) {
           );
           })}
       </form>
-      <div className="pagination">
+      <br/>
+      <div className="">
         <button onClick={goToPreviousPage} disabled={currentPage === 1}>
           Previous
         </button>
@@ -101,8 +103,9 @@ export function QuesBlock({ questions }) {
           Next
         </button>
       </div>
+      <br/>
       <div> Your Score is: {score}</div>
-    </>
+    </div>
   );
 }
 

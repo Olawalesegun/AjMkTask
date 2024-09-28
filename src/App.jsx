@@ -1,17 +1,13 @@
 // import { useState } from 'react'
 import './App.css'
 import LandingPage from './pages/landingPage';
-import questions from './data/questions';
-import { QuesBlock } from './components/quesAnsBlock';
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="bg-white w-48 h-64 rounded-lg">
       <LandingPage />
-      <QuesBlock questions={questions} />
-    </>
+    </div>
   )
 }
 

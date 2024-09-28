@@ -1,10 +1,15 @@
+import { QuesBlock } from '../components/quesAnsBlock';
+import questions from '../data/questions';
+
 export default function LandingPage() {
 
   return (
-    <header>
-      <h1>Ojulari Quiz App</h1>
-      <h2>Be rest assured that here</h2>
-    </header>
+    <div>
+      <header className="">
+        <h1 className="text-sm">Pre-DApp Building Quiz App</h1>
+      </header>
+      <QuesBlock questions={questions} />
+    </div>
     
   )
 }
